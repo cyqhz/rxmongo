@@ -6,3 +6,16 @@ spring:
 #      port: 27017
 #      database: rxmongo
 
+dubbo:
+  application:
+    name: rxmongo
+    metadataServicePort: 20885
+    qosEnable: true
+    qosAcceptForeignIp: true
+  #registry:
+    #address: kubernetes://DEFAULT_MASTER_HOST?registry-type=service&duplicate=false&trustCerts=true
+  protocol:
+    name: dubbo
+    port: 20880
+  provider:
+    token: false
